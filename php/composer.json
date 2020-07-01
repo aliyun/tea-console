@@ -1,0 +1,25 @@
+{
+  "name": "alibabacloud/tea-print",
+  "description": "Alibaba Cloud Tea Print Library for PHP",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [],
+  "require": {
+    "php": ">5.5",
+    "monolog/monolog": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "AlibabaCloud\\Tea\\Print\\": "src"
+    }
+  },
+  "scripts": {
+    "fixer": "php-cs-fixer fix ./"
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true
+  },
+  "prefer-stable": true
+}
