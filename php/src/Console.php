@@ -13,7 +13,9 @@ class Console
     private static $loggerDriver;
 
     /**
-     * Print val with log level.
+     * Console val with log level into stdout.
+     *
+     * @example \[LOG\] tea console example
      *
      * @param string $val the printing string
      *
@@ -25,7 +27,9 @@ class Console
     }
 
     /**
-     * Print val with info level.
+     * Console val with info level into stdout.
+     *
+     * @example \[INFO\] tea console example
      *
      * @param string $val the printing string
      *
@@ -37,7 +41,9 @@ class Console
     }
 
     /**
-     * Print val with warning level.
+     * Console val with warning level into stdout.
+     *
+     * @example \[WARNING\] tea console example
      *
      * @param string $val the printing string
      *
@@ -49,7 +55,9 @@ class Console
     }
 
     /**
-     * Print val with debug level.
+     * Console val with debug level into stdout.
+     *
+     * @example \[DEBUG\] tea console example
      *
      * @param string $val the printing string
      *
@@ -61,7 +69,9 @@ class Console
     }
 
     /**
-     * Print val with error level.
+     * Console val with error level into stderr.
+     *
+     * @example \[ERROR\] tea console example
      *
      * @param string $val the printing string
      *
