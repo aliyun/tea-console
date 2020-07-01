@@ -1,6 +1,6 @@
 {
-  "name": "alibabacloud/tea-print",
-  "description": "Alibaba Cloud Tea Print Library for PHP",
+  "name": "alibabacloud/tea-console",
+  "description": "Alibaba Cloud Tea Console Output Library for PHP",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [],
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AlibabaCloud\\Tea\\Print\\": "src"
+      "AlibabaCloud\\Tea\\Console\\": "src"
     }
   },
   "scripts": {
