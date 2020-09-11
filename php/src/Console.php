@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tea\Console;
 
+use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
@@ -10,30 +11,33 @@ use Monolog\Logger;
  */
 class Console
 {
+    /**
+     * @var Logger
+     */
     private static $loggerDriver;
 
     /**
      * Console val with log level into stdout.
      *
-     * @example \[LOG\] tea console example
-     *
      * @param string $val the printing string
      *
      * @throws \Exception
+     *
+     * @example \[LOG\] tea console example
      */
     public static function log($val)
     {
-        self::logger()->log(0, $val);
+        self::logger()->log(200, $val);
     }
 
     /**
      * Console val with info level into stdout.
      *
-     * @example \[INFO\] tea console example
-     *
      * @param string $val the printing string
      *
      * @throws \Exception
+     *
+     * @example \[INFO\] tea console example
      */
     public static function info($val)
     {
@@ -43,11 +47,11 @@ class Console
     /**
      * Console val with warning level into stdout.
      *
-     * @example \[WARNING\] tea console example
-     *
      * @param string $val the printing string
      *
      * @throws \Exception
+     *
+     * @example \[WARNING\] tea console example
      */
     public static function warning($val)
     {
@@ -57,11 +61,11 @@ class Console
     /**
      * Console val with debug level into stdout.
      *
-     * @example \[DEBUG\] tea console example
-     *
      * @param string $val the printing string
      *
      * @throws \Exception
+     *
+     * @example \[DEBUG\] tea console example
      */
     public static function debug($val)
     {
@@ -71,11 +75,11 @@ class Console
     /**
      * Console val with error level into stderr.
      *
-     * @example \[ERROR\] tea console example
-     *
      * @param string $val the printing string
      *
      * @throws \Exception
+     *
+     * @example \[ERROR\] tea console example
      */
     public static function error($val)
     {
@@ -83,9 +87,17 @@ class Console
     }
 
     /**
+     * @param AbstractProcessingHandler $handler
+     */
+    public static function pushHandler($handler)
+    {
+        self::$loggerDriver->pushHandler($handler);
+    }
+
+    /**
      * @return Logger
      */
-    private static function logger()
+    public static function logger()
     {
         if (null === self::$loggerDriver) {
             self::$loggerDriver = new Logger('tea-console-log');
