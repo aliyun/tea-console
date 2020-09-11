@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Tea\Console;
 
-use Monolog\Handler\PHPConsoleHandler;
+use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
 /**
@@ -23,7 +23,7 @@ class Console
      */
     public static function log($val)
     {
-        self::logger()->log('LOG', $val);
+        self::logger()->log(0, $val);
     }
 
     /**
@@ -89,7 +89,7 @@ class Console
     {
         if (null === self::$loggerDriver) {
             self::$loggerDriver = new Logger('tea-console-log');
-            self::$loggerDriver->pushHandler(new PHPConsoleHandler());
+            self::$loggerDriver->pushHandler(new StreamHandler('php://stderr', 0));
         }
 
         return self::$loggerDriver;
