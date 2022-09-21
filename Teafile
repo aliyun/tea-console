@@ -10,7 +10,8 @@
 		"java": "com.aliyun:tea-console:0.0.1",
 		"php": "alibabacloud/tea-console:^0.1.0",
 		"python": "alibabacloud_tea_console:0.0.1",
-		"python2": "alibabacloud_tea_console_py2:0.0.1"
+		"python2": "alibabacloud_tea_console_py2:0.0.1",
+		"swift": "alibabacloud-sdk-swift/darabonba-console:1.0.0"
 	},
 	"java": {
 		"package": "com.aliyun.teaconsole",
@@ -64,5 +65,15 @@
 			"author": "Alibaba Cloud SDK",
 			"email": "sdk-team@alibabacloud.com"
 		}
-	}
+	},
+	"swift": {
+		"clientName": "Client",
+		"packageInfo": {
+		  "name": "AlibabacloudTeaConsole",
+		  "desc": "Alibaba Cloud Tea Console Output Library for Swift(5.6)",
+		  "github": "https://github.com/alibabacloud-sdk-swift/darabonba-console",
+		  "author": "Alibaba Cloud SDK",
+		  "email": "sdk-team@alibabacloud.com"
+		}
+	  }
 }
